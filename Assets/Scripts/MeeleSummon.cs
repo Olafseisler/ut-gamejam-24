@@ -12,19 +12,16 @@ public class MeeleSummon : MonoBehaviour
     [SerializeField] private bool inCombat = false;
     [SerializeField] private bool waiting = false;
     [SerializeField] private string enemyTag;
-    private Rigidbody2D rb;
-    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag(enemyTag)) inCombat = true;
-        else waiting = true;
+        else if (other.gameObject.CompareTag(gameObject.tag)) waiting = true;
     }
 
     private void OnCollisionExit2D()
@@ -37,30 +34,30 @@ public class MeeleSummon : MonoBehaviour
     {
         if (inCombat)
         {
-            combat();
+            combat(Time.deltaTime);
         }
 
-        if (!waiting)
+        else if (waiting)
         {
-            move(Time.deltaTime); 
+            idle(Time.deltaTime);
         }
         else
         {
-            idle();
+            move(Time.deltaTime);
         }
     }
 
     private void move(float deltaTime)
     {
-//         rb.MovePosition(rb.position + (Vector2) transform.forward * (speed * deltaTime));
+        transform.position += Vector3.right * (speed * deltaTime);
     }
     
-    private void combat()
+    private void combat(float deltaTime)
     {
         
     }
     
-    private void idle()
+    private void idle(float deltaTime)
     {
         
     }
