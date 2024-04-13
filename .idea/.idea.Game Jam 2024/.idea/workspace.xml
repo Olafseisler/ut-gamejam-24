@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b909272-b870-46f3-818b-ce8120e7fd4e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ut-gamejam-24/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ut-gamejam-24/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/tegelane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/tegelane.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptTest.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptTest.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/liikumine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/liikumine.cs.meta" beforeDir="false" />
+    <list default="true" id="647a02d9-e0cd-4c44-876c-cc8bc58d14fc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2024/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2024/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2024/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2024/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JaanisScene.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JaanisScene/JaanisScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JaanisScene/JaanisScene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JaanisScene/ScriptJaanis.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JaanisScene/ScriptJaanis.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,13 +25,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/DestroyTimer.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
+  &quot;associatedIndex&quot;: 5
 }</component>
-  <component name="ProjectId" id="2f2NRPSxCWC41e8nx7fBUwM5skM" />
+  <component name="ProjectId" id="2f20BDelSfbyvhBfAzvqwlwFCtS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,25 +46,25 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\mirkomar\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\mirkomar\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\mirkomar\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\37253\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\37253\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\37253\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
-      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\mirkomar\Desktop\ut-gamejam-24 -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\mirkomar\Desktop\ut-gamejam-24" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\37253\Desktop\Game Jam 2024&quot; -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\37253\Desktop\Game Jam 2024" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
-      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\mirkomar\Desktop\ut-gamejam-24 -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\mirkomar\Desktop\ut-gamejam-24" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\37253\Desktop\Game Jam 2024&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\37253\Desktop\Game Jam 2024" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
@@ -93,12 +93,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3b909272-b870-46f3-818b-ce8120e7fd4e" name="Changes" comment="" />
-      <created>1712995205610</created>
+      <changelist id="647a02d9-e0cd-4c44-876c-cc8bc58d14fc" name="Changes" comment="" />
+      <created>1712983731522</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1712995205610</updated>
-      <workItem from="1712995206470" duration="1661000" />
+      <updated>1712983731522</updated>
+      <workItem from="1712983731524" duration="4821000" />
+      <workItem from="1712994560174" duration="7451000" />
     </task>
     <servers />
   </component>
@@ -112,17 +113,6 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
