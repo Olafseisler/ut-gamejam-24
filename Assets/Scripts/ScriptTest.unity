@@ -156,8 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6f99ceadac34475becca92ec3d3104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
-  raycastLength: 1
 --- !u!50 &319910989
 Rigidbody2D:
   serializedVersion: 4
@@ -329,7 +327,6 @@ GameObject:
   - component: {fileID: 385807173}
   - component: {fileID: 385807172}
   - component: {fileID: 385807174}
-  - component: {fileID: 385807171}
   - component: {fileID: 385807170}
   m_Layer: 0
   m_Name: Square (2)
@@ -383,33 +380,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &385807171
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385807169}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 10
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &385807172
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -471,7 +441,7 @@ Transform:
   m_GameObject: {fileID: 385807169}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.43, y: -0.08, z: 0}
+  m_LocalPosition: {x: -8.264, y: -2.418, z: 0}
   m_LocalScale: {x: 0.3212, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -743,11 +713,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3761025749179325669, guid: a8bad81d82175c64b9305f8d8fd4ffda, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.53
+      value: -6.572
       objectReference: {fileID: 0}
     - target: {fileID: 3761025749179325669, guid: a8bad81d82175c64b9305f8d8fd4ffda, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.04
+      value: -2.365
       objectReference: {fileID: 0}
     - target: {fileID: 3761025749179325669, guid: a8bad81d82175c64b9305f8d8fd4ffda, type: 3}
       propertyPath: m_LocalPosition.z
@@ -785,7 +755,8 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4529452759169400443, guid: a8bad81d82175c64b9305f8d8fd4ffda, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
