@@ -14,6 +14,7 @@ public class MeeleSummon : MonoBehaviour
     [SerializeField] private bool waiting = false;
     [SerializeField] private string enemyTag;
     // Start is called before the first frame update
+    
     void Start()
     {
         speed *= direction;
@@ -65,5 +66,25 @@ public class MeeleSummon : MonoBehaviour
     private void idle(float deltaTime)
     {
         
+    }
+    
+    public void SetupFriendly() {
+        enemyTag = "Enemy";
+        direction = 1;
+        // Set own tag to friendly
+        gameObject.tag = "Friendly";
+        // Set layer
+        gameObject.layer = LayerMask.NameToLayer("Friendly");
+    }
+    
+    public void SetupEnemy() {
+        enemyTag = "Friendly";
+        direction = -1;
+        // Flip the sprite
+        GetComponent<SpriteRenderer>().flipX = true;
+        // Set own tag to enemy
+        gameObject.tag = "Enemy";
+        // Set layer
+        gameObject.layer = LayerMask.NameToLayer("Enemy");
     }
 }
