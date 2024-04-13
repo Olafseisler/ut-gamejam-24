@@ -22,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
         if (currentInterwal <= 0)
         {
             var go = Instantiate(tegelane, transform.position , Quaternion.identity);
-            Debug.Log("Spawned minion");
+            // Debug.Log("Spawned minion");
             if (isEnemySpawner)
             {
                 // Set enemy tag

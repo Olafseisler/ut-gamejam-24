@@ -35,7 +35,7 @@ public class AttackRanged : MonoBehaviour
         }
         // Do not shoot if friendlies are in the way
         RaycastHit2D hit = Physics2D.Raycast(transform.position, enemyPosition - transform.position, maxRange, 1 << LayerMask.NameToLayer(enemyLayer));
-        if (hit.collider != null && hit.collider.CompareTag("Friendly"))
+        if (hit.collider != null && hit.collider.CompareTag(gameObject.tag))
         {
             return;
         }
@@ -79,6 +79,6 @@ public class AttackRanged : MonoBehaviour
         projectile.GetComponent<Rigidbody2D>().velocity = direction.normalized * projectileSpeed;
         projectile.tag = gameObject.tag;
         _currentAttackCooldown = attackCooldown;
-        Debug.Log("Shot projectile");
+        // Debug.Log("Shot projectile");
     }
 }

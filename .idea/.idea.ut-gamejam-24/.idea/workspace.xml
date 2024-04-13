@@ -4,25 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e431c839-e97d-428d-a65f-9064cc1561c1" name="Changes" comment="Tried adding ranged unit with projectile.">
+    <list default="true" id="e431c839-e97d-428d-a65f-9064cc1561c1" name="Changes" comment="Reworked the movement and damage system.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ut-gamejam-24/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ut-gamejam-24/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Angel 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Angel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/tegelane.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/tegelane.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Elud.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Elud.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangedSummon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangedSummon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/liikumine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/liikumine.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/spawner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/spawner.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/voitle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/voitle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttackRanged.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttackRanged.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Angel 2  _move 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Angel 2  _move 1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/angel 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/angel 1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/angel 2 _move 2 (1).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/angel 2 _move 2 (1).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/angel 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/angel 2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/flap (1).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/flap (1).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/flap (2).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/flap (2).png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +31,7 @@
     <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69e3bb5952244e078afb26cb39441eed955800/fb/11d6508d/PhysicsDebugDraw.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e307bbb467104258887a104f6151f183469200/fb/29227eaf/CancellationTokenSource.cs" root0="SKIP_HIGHLIGHTING" />
@@ -132,7 +127,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712943161534</updated>
       <workItem from="1712943162221" duration="21054000" />
-      <workItem from="1713017400731" duration="15743000" />
+      <workItem from="1713017400731" duration="19222000" />
     </task>
     <task id="LOCAL-00001" summary="Added 2 summon prefabs and reorganized the project a bit.">
       <created>1713017504714</created>
@@ -176,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713031400844</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Reworked the movement and damage system.">
+      <created>1713037780820</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713037780820</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +199,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="Added UIController" />
     <MESSAGE value="Tried adding ranged unit with projectile." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried adding ranged unit with projectile." />
+    <MESSAGE value="Reworked the movement and damage system." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reworked the movement and damage system." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -214,19 +217,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/AttackRanged.cs</url>
-          <line>36</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/AttackRanged.cs" initialLine="36" containingFunctionPresentation="method 'FixedUpdate'">
-            <startOffsets>
-              <option value="993" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1136" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
