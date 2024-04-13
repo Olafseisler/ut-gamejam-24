@@ -13,7 +13,7 @@ public class MeeleSummon : MonoBehaviour
     [SerializeField] private bool inCombat = false;
     [SerializeField] private bool waiting = false;
     [SerializeField] private string enemyTag;
-    [SerializeField]private float vahe = 1f;
+    [SerializeField]private float vahe = 0.2f;
 
     private Animator _animator;
     private string _friendlyTag;
@@ -26,7 +26,8 @@ public class MeeleSummon : MonoBehaviour
         speed *= direction;
         _animator = GetComponent<Animator>();
         _friendlyTag = gameObject.tag;
-        _height2 = new Vector3(0, gameObject.GetComponent<Collider2D>().bounds.size.y / 2);
+        //_height2 = new Vector3(0, gameObject.GetComponent<Collider2D>().bounds.size.y / 2);
+        _height2 = new Vector3(0, 0.1f);
         _width2 = new Vector3(gameObject.GetComponent<Collider2D>().bounds.size.x / 2 + 0.01f, 0) * direction;
     }
     
@@ -66,7 +67,7 @@ public class MeeleSummon : MonoBehaviour
     
     private void combat(float deltaTime)
     {
-        
+        _animator.SetBool("isMoving", false);
     }
     
     private void idle(float deltaTime)

@@ -107,6 +107,7 @@ MonoBehaviour:
   inCombat: 0
   waiting: 0
   enemyTag: 
+  vahe: 0.2
 --- !u!61 &4396131469903773721
 BoxCollider2D:
   m_ObjectHideFlags: 0
