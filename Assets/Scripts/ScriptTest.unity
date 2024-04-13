@@ -231,9 +231,17 @@ PrefabInstance:
       propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1336314294048082744, guid: 148c9349c3941e94587baa1bf52e4c16, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2114091889711475904, guid: 148c9349c3941e94587baa1bf52e4c16, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114091889711475904, guid: 148c9349c3941e94587baa1bf52e4c16, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2114091889711475904, guid: 148c9349c3941e94587baa1bf52e4c16, type: 3}
       propertyPath: m_IsActive
@@ -756,9 +764,17 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1336314294048082744, guid: 148c9349c3941e94587baa1bf52e4c16, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2114091889711475904, guid: 148c9349c3941e94587baa1bf52e4c16, type: 3}
       propertyPath: m_Name
       value: tegelane
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114091889711475904, guid: 148c9349c3941e94587baa1bf52e4c16, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2114091889711475904, guid: 148c9349c3941e94587baa1bf52e4c16, type: 3}
       propertyPath: m_TagString
