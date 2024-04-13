@@ -23,6 +23,7 @@ public class spawner : MonoBehaviour
         {
             var go = Instantiate(tegelane, transform.position , Quaternion.identity);
             var minionScript = go.GetComponent<MeeleSummon>();
+            Debug.Log("Spawned minion");
             if (isEnemySpawner)
             {
                 minionScript.SetupEnemy();
