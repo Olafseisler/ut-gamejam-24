@@ -40,19 +40,17 @@ public class MeeleSummon : MonoBehaviour
 
         if (waiting)
         {
-             idle(Time.deltaTime);
-             return;
+            idle(Time.deltaTime);
         }
         else
         {
             move(Time.deltaTime);
-            return;
         }
     }
 
     private void move(float deltaTime)
     {
-        transform.position += new Vector3(speed*deltaTime, 0);
+        transform.position += Vector3.right * (speed * deltaTime);
     }
     
     private void combat(float deltaTime)
