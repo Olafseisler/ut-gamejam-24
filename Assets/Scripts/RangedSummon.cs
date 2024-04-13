@@ -18,79 +18,99 @@ public class RangedSummon : MonoBehaviour
     [SerializeField] private bool inCombat = false;
     [SerializeField] private bool waiting = false;
     [SerializeField] private string enemyTag;
+    [SerializeField] private float vahe = 0.1f;
+    
+    private Animator _animator;
+    private string _friendlyTag;
+    private Vector3 _height2;
+    private Vector3 _width2;
     // Start is called before the first frame update
     void Start()
     {
+        _animator = GetComponent<Animator>();
         speed *= direction;
+        _friendlyTag = gameObject.tag;
+        //_height2 = new Vector3(0, gameObject.GetComponent<Collider2D>().bounds.size.y / 2);
+        _height2 = new Vector3(0, 0.1f);
+        _width2 = new Vector3(gameObject.GetComponent<Collider2D>().bounds.size.x / 2 + 0.01f, 0) * direction;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    { 
-        if (other.gameObject.CompareTag(enemyTag)) inCombat = true;
-        else if (other.gameObject.CompareTag(gameObject.tag)) waiting = true;
+    private void FixedUpdate()
+    {
+        //InCombat
+        if (Physics2D.Raycast(transform.position + _height2 + _width2, _width2, vahe, 1 << LayerMask.NameToLayer(enemyTag))) inCombat = true;
+        else
+        {
+            inCombat = false;
+            //Waiting
+            if (Physics2D.Raycast(transform.position + _height2 +
+                                  _width2, _width2, vahe, 1 << LayerMask.NameToLayer(_friendlyTag))) waiting = true;
+            else waiting = false;
+        }
     }
-    
-    // private void OnCollisionExit2D()
-    // {
-    //     waiting = false;
-    // }
 
-    // Update is called once per frame
     void Update()
     {
         if (health <= 0)
         {
             Destroy(gameObject);
         }
-
-        if (!Physics2D.Raycast(
-                transform.position + Vector3.up +
-                new Vector3(gameObject.GetComponent<Collider2D>().bounds.size.x / 2 + 0.01f, 0),
-                transform.right * direction,
-                0.01f).collider) waiting = false;
-        if (Physics2D.Raycast(transform.position + Vector3.up, transform.right * direction, range, 1 << LayerMask.NameToLayer(enemyTag)).collider) inRange = true;
-        else inRange = false;
         
-        if (inCombat)
-        {
-            closeCombat(Time.deltaTime);
-        }
-        else if (inRange)
-        {
-            rangedCombat(Time.deltaTime);
-        }
-        else if (waiting)
-        {
-            idle(Time.deltaTime);
-        }
+        if (inCombat) closeCombat(Time.deltaTime);
         else
         {
-            move(Time.deltaTime);
+            //InRange
+            if (Physics2D.Raycast(transform.position + _height2 + _width2, _width2, range, 1 << LayerMask.NameToLayer(enemyTag)).collider) inRange = true;
+            else inRange = false;
+            if(inRange){rangedCombat(Time.deltaTime);}
+            else if (waiting)idle(Time.deltaTime);
+            else move(Time.deltaTime);
         }
+
     }
 
     private void move(float deltaTime)
     {
         transform.position += Vector3.right * (speed * deltaTime);
+        _animator.SetBool("isMoving", true); 
     }
     
     private void closeCombat(float deltaTime)
     {
-        
+        _animator.SetBool("isMoving", false);
     }
     
     private void rangedCombat(float deltaTime)
     {
-        
+        if (!waiting) move(deltaTime);
     }
     
     private void idle(float deltaTime)
     {
-        
+        _animator.SetBool("isMoving", false);
     }
 
+    public void SetupFriendly() {
+        enemyTag = "Enemy";
+        direction = 1;
+        // Set own tag to friendly
+        gameObject.tag = "Friendly";
+        // Set layer
+        gameObject.layer = LayerMask.NameToLayer("Friendly");
+    }
+    
+    public void SetupEnemy() {
+        enemyTag = "Friendly";
+        direction = -1;
+        // Flip the sprite
+        GetComponent<SpriteRenderer>().flipX = true;
+        // Set own tag to enemy
+        gameObject.tag = "Enemy";
+        // Set layer
+        gameObject.layer = LayerMask.NameToLayer("Enemy");
+    }
     private void OnDrawGizmos()
     {
-        Gizmos.DrawLine(transform.position, transform.position + new Vector3(range, 0) * direction);
+
     }
 }
