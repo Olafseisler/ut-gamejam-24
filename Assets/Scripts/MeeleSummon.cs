@@ -21,7 +21,7 @@ public class MeeleSummon : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag(enemyTag)) inCombat = true;
-        else waiting = true;
+        else if (other.gameObject.CompareTag(gameObject.tag)) waiting = true;
     }
 
     private void OnCollisionExit2D()
@@ -35,10 +35,9 @@ public class MeeleSummon : MonoBehaviour
         if (inCombat)
         {
             combat(Time.deltaTime);
-            return;
         }
 
-        if (waiting)
+        else if (waiting)
         {
             idle(Time.deltaTime);
         }
