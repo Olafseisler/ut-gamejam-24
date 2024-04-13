@@ -13,10 +13,14 @@ public class MeeleSummon : MonoBehaviour
     [SerializeField] private bool inCombat = false;
     [SerializeField] private bool waiting = false;
     [SerializeField] private string enemyTag;
+
+    private Animator _animator;
     // Start is called before the first frame update
+    
     void Start()
     {
         speed *= direction;
+        _animator = GetComponent<Animator>();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -54,6 +58,7 @@ public class MeeleSummon : MonoBehaviour
     private void move(float deltaTime)
     {
         transform.position += Vector3.right * (speed * deltaTime);
+        _animator.SetBool("isMoving", true);        
     }
     
     private void combat(float deltaTime)
@@ -63,6 +68,26 @@ public class MeeleSummon : MonoBehaviour
     
     private void idle(float deltaTime)
     {
-        
+        _animator.SetBool("isMoving", false);
+    }
+    
+    public void SetupFriendly() {
+        enemyTag = "Enemy";
+        direction = 1;
+        // Set own tag to friendly
+        gameObject.tag = "Friendly";
+        // Set layer
+        gameObject.layer = LayerMask.NameToLayer("Friendly");
+    }
+    
+    public void SetupEnemy() {
+        enemyTag = "Friendly";
+        direction = -1;
+        // Flip the sprite
+        GetComponent<SpriteRenderer>().flipX = true;
+        // Set own tag to enemy
+        gameObject.tag = "Enemy";
+        // Set layer
+        gameObject.layer = LayerMask.NameToLayer("Enemy");
     }
 }

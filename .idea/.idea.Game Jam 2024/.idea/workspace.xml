@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="647a02d9-e0cd-4c44-876c-cc8bc58d14fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2024/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2024/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2024/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2024/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JaanisScene.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JaanisScene/JaanisScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JaanisScene/JaanisScene.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JaanisScene/ScriptJaanis.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JaanisScene/ScriptJaanis.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="647a02d9-e0cd-4c44-876c-cc8bc58d14fc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2261434293720443101}
   - component: {fileID: 6795892189338316568}
   - component: {fileID: 3712015703437750984}
+  - component: {fileID: -3586353341797422562}
   m_Layer: 0
   m_Name: tegelane
   m_TagString: Untagged
@@ -190,12 +191,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114091889711475904}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c6f99ceadac34475becca92ec3d3104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 2
+  isMoving: 1
 --- !u!114 &6795892189338316568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114091889711475904}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81e51071780c4fd4bbb8a8e3817bbe81, type: 3}
   m_Name: 
@@ -217,10 +219,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114091889711475904}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eee910105dcfc0241b5ca55da47bb034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackPower: 2
   tegelane: {fileID: 0}
+--- !u!114 &-3586353341797422562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114091889711475904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f5d2f9f819d8349ba67daa232ed367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  dmg: 1
+  speed: 2
+  direction: 1
+  inCombat: 0
+  waiting: 0
+  enemyTag: Enemy

@@ -572,7 +572,7 @@ PrefabInstance:
     - target: {fileID: 8964243844289571298, guid: a79d4e2ad974a0d4a9f8934e4576a69f, type: 3}
       propertyPath: tegelane
       value: 
-      objectReference: {fileID: 1556200139782638080, guid: 51d93e59284df481b915da5d835b7460, type: 3}
+      objectReference: {fileID: 2114091889711475904, guid: 148c9349c3941e94587baa1bf52e4c16, type: 3}
     - target: {fileID: 8964243844289571298, guid: a79d4e2ad974a0d4a9f8934e4576a69f, type: 3}
       propertyPath: isEnemySpawner
       value: 1
@@ -722,14 +722,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8964243844289571298, guid: a79d4e2ad974a0d4a9f8934e4576a69f, type: 3}
-      propertyPath: tegelane
-      value: 
-      objectReference: {fileID: 1556200139782638080, guid: 95a485d429a57487690cf2bfa20e7b97, type: 3}
-    - target: {fileID: 8964243844289571298, guid: a79d4e2ad974a0d4a9f8934e4576a69f, type: 3}
-      propertyPath: isEnemySpawner
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -741,8 +733,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1780776992}
+  - {fileID: 5944168219979474813}
+  - {fileID: 1289995924}
   - {fileID: 729717192}
   - {fileID: 2335172}
   - {fileID: 771800784}
-  - {fileID: 1289995924}
-  - {fileID: 5944168219979474813}
