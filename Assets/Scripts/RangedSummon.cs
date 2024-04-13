@@ -22,8 +22,6 @@ public class RangedSummon : MonoBehaviour
     void Start()
     {
         speed *= direction;
-        //ContactFilter2D filter = new ContactFilter2D();
-        //filter.layerMask =  1 << LayerMask.NameToLayer("Enemy");
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -31,11 +29,11 @@ public class RangedSummon : MonoBehaviour
         if (other.gameObject.CompareTag(enemyTag)) inCombat = true;
         else if (other.gameObject.CompareTag(gameObject.tag)) waiting = true;
     }
-
-    private void OnCollisionExit2D()
-    {
-        waiting = false;
-    }
+    
+    // private void OnCollisionExit2D()
+    // {
+    //     waiting = false;
+    // }
 
     // Update is called once per frame
     void Update()
@@ -44,8 +42,13 @@ public class RangedSummon : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right , range, 1 << LayerMask.NameToLayer(enemyTag));
-        if (hit.collider) inRange = true;
+
+        if (!Physics2D.Raycast(
+                transform.position + Vector3.up +
+                new Vector3(gameObject.GetComponent<Collider2D>().bounds.size.x / 2 + 0.01f, 0),
+                transform.right * direction,
+                0.01f).collider) waiting = false;
+        if (Physics2D.Raycast(transform.position + Vector3.up, transform.right * direction, range, 1 << LayerMask.NameToLayer(enemyTag)).collider) inRange = true;
         else inRange = false;
         
         if (inCombat)
@@ -84,5 +87,10 @@ public class RangedSummon : MonoBehaviour
     private void idle(float deltaTime)
     {
         
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, transform.position + new Vector3(range, 0) * direction);
     }
 }
