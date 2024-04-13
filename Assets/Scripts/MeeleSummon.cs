@@ -3,39 +3,45 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MeeleSummon : MonoBehaviour
 {
-    [SerializeField] private float health;
-    [SerializeField] private float dmg;
-    [SerializeField] private float speed;
-    [SerializeField] private int direction; 
-    [SerializeField] private bool inCombat = false;
-    [SerializeField] private bool waiting = false;
-    [SerializeField] private string enemyTag;
-    [SerializeField]private float vahe = 0.2f;
+    [SerializeField] protected float health; 
+    [SerializeField] protected float meleeDamage;
+    [SerializeField] protected float moveSpeed;
+    [SerializeField] protected int direction; 
+    [SerializeField] protected bool inCombat = false;
+    [SerializeField] protected bool waiting = false;
+    [SerializeField] protected string enemyTag;
+    [SerializeField] protected float vahe = 0.2f;
 
-    private Animator _animator;
-    private string _friendlyTag;
-    private Vector3 _height2;
-    private Vector3 _width2;
+    protected Animator _animator;
+    protected string _friendlyTag;
+    protected Vector3 _height2;
+    protected Vector3 _width2;
 
     private RaycastHit2D _enemy;
     // Start is called before the first frame update
-    protected float Health
-    {
-        get => health;
-        set => health = value;
-    }
+    protected float Health;
 
     void Start()
     {
-        speed *= direction;
+        moveSpeed *= direction;
         _animator = GetComponent<Animator>();
         _friendlyTag = gameObject.tag;
         //_height2 = new Vector3(0, gameObject.GetComponent<Collider2D>().bounds.size.y / 2);
         _height2 = new Vector3(0, 0.1f);
         _width2 = new Vector3(gameObject.GetComponent<Collider2D>().bounds.size.x / 2 + 0.01f, 0) * direction;
+    }
+    
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     
     private void FixedUpdate()
@@ -57,30 +63,26 @@ public class MeeleSummon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
-        
         if (inCombat) combat(Time.deltaTime, _enemy);
         else if (waiting)idle(Time.deltaTime);
         else move(Time.deltaTime);
     }
 
-    private void move(float deltaTime)
+    protected void move(float deltaTime)
     {
-        transform.position += Vector3.right * (speed * deltaTime);
+        transform.position += Vector3.right * (moveSpeed * deltaTime);
         _animator.SetBool("isMoving", true);        
     }
     
     private void combat(float deltaTime, RaycastHit2D enemyHit2D)
     {
-        GameObject enemy = enemyHit2D.collider.gameObject;
+        if (enemyHit2D.collider == null) return;
+        var enemy = enemyHit2D.collider.gameObject;
         _animator.SetBool("isMoving", false);
-        enemy.GetComponent<MeeleSummon>().Health = enemy.GetComponent<MeeleSummon>().Health - dmg;
+        enemy.GetComponent<MeeleSummon>().Health = enemy.GetComponent<MeeleSummon>().Health - meleeDamage;
     }
     
-    private void idle(float deltaTime)
+    protected void idle(float deltaTime)
     {
         _animator.SetBool("isMoving", false);
     }

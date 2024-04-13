@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f5d2f9f819d8349ba67daa232ed367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  dmg: 0.5
-  speed: 2
+  health: 5
+  meleeDamage: 1
+  moveSpeed: 1
   direction: 1
   inCombat: 0
   waiting: 0

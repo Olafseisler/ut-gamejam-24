@@ -7,7 +7,7 @@ public class UIController : MonoBehaviour
 {
     [SerializeField] private Transform summonPosition;
     [SerializeField] private GameObject summonSelectButton;
-    public GameObject summonButtonParent;
+    [SerializeField] GameObject summonButtonParent;
     [SerializeField] List<GameObject> summons;
     
     
@@ -25,7 +25,7 @@ public class UIController : MonoBehaviour
             {
                 var go1 = Instantiate(summons[index], summonPosition.position, Quaternion.identity);
                 var minionScript = go1.GetComponent<MeeleSummon>();
-                minionScript.SetupFriendly();
+                minionScript.SetupFriendly();   
             });
         }
     }
