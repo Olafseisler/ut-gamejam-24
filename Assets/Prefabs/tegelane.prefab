@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 2365321881964051100}
   - component: {fileID: 1336314294048082744}
   - component: {fileID: 1123486132302073819}
-  - component: {fileID: 2261434293720443101}
   - component: {fileID: 311039076449190050}
   - component: {fileID: 5890030922679700480}
+  - component: {fileID: 2261434293720443101}
+  - component: {fileID: 6795892189338316568}
+  - component: {fileID: 3712015703437750984}
   m_Layer: 0
   m_Name: tegelane
   m_TagString: Untagged
@@ -115,19 +117,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2261434293720443101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114091889711475904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c6f99ceadac34475becca92ec3d3104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movespeed: 5
 --- !u!61 &311039076449190050
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -194,3 +183,44 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2261434293720443101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114091889711475904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6f99ceadac34475becca92ec3d3104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movespeed: 2
+--- !u!114 &6795892189338316568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114091889711475904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e51071780c4fd4bbb8a8e3817bbe81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elud: 1
+  tegelane: {fileID: 0}
+--- !u!114 &3712015703437750984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114091889711475904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee910105dcfc0241b5ca55da47bb034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPower: 2
+  tegelane: {fileID: 0}

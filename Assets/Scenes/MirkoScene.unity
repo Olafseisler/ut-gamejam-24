@@ -568,7 +568,7 @@ PrefabInstance:
     - target: {fileID: 8964243844289571298, guid: a79d4e2ad974a0d4a9f8934e4576a69f, type: 3}
       propertyPath: tegelane
       value: 
-      objectReference: {fileID: 5346868279516845890, guid: 01ee4fadb60c71f4693bb8f1493ae7bf, type: 3}
+      objectReference: {fileID: 2114091889711475904, guid: 5f6fb011d8e1b1243999a30a4531993a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -658,63 +658,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5768380484529783941
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3957097389587579112, guid: 01ee4fadb60c71f4693bb8f1493ae7bf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 3957097389587579112, guid: 01ee4fadb60c71f4693bb8f1493ae7bf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 3957097389587579112, guid: 01ee4fadb60c71f4693bb8f1493ae7bf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.37172
-      objectReference: {fileID: 0}
-    - target: {fileID: 3957097389587579112, guid: 01ee4fadb60c71f4693bb8f1493ae7bf, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3957097389587579112, guid: 01ee4fadb60c71f4693bb8f1493ae7bf, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3957097389587579112, guid: 01ee4fadb60c71f4693bb8f1493ae7bf, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3957097389587579112, guid: 01ee4fadb60c71f4693bb8f1493ae7bf, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3957097389587579112, guid: 01ee4fadb60c71f4693bb8f1493ae7bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3957097389587579112, guid: 01ee4fadb60c71f4693bb8f1493ae7bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3957097389587579112, guid: 01ee4fadb60c71f4693bb8f1493ae7bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5346868279516845890, guid: 01ee4fadb60c71f4693bb8f1493ae7bf, type: 3}
-      propertyPath: m_Name
-      value: tegelaneP
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 01ee4fadb60c71f4693bb8f1493ae7bf, type: 3}
 --- !u!1001 &5944168219979474813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -780,6 +723,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1123486132302073819, guid: 148c9349c3941e94587baa1bf52e4c16, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1336314294048082744, guid: 148c9349c3941e94587baa1bf52e4c16, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -798,7 +745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2365321881964051100, guid: 148c9349c3941e94587baa1bf52e4c16, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.37172
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2365321881964051100, guid: 148c9349c3941e94587baa1bf52e4c16, type: 3}
       propertyPath: m_LocalRotation.w
@@ -844,5 +791,4 @@ SceneRoots:
   - {fileID: 2335172}
   - {fileID: 9031458988413144889}
   - {fileID: 771800784}
-  - {fileID: 5768380484529783941}
   - {fileID: 5944168219979474813}

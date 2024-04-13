@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Elud : MonoBehaviour
 {
 
-    [SerializeField] private float elud = 1;
+    [SerializeField] private float elud = 10f;
     [SerializeField] private GameObject tegelane;
     private float currentElud;
     
@@ -21,7 +21,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (currentElud <= 0)
         {
-            //tegelane.IsDestr;
+            Destroy(tegelane);
         }
     }
 }

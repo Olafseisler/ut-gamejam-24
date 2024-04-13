@@ -5,6 +5,9 @@ using UnityEngine;
 public class liikumine : MonoBehaviour
 {
     [SerializeField] private float movespeed = 2.0f;
+
+    public bool isMoving = true;
+    
     // Start is called before the first frame update
     void Start() // kui mäng algas siis tehakse kohe, ühekordne
     {
@@ -12,8 +15,12 @@ public class liikumine : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() //iga frame update kävtatakse
+    void FixedUpdate() //iga frame update kävtatakse
     {
-        transform.position += new Vector3(movespeed*Time.deltaTime, 0);
+        if (isMoving)
+        {
+            transform.position += new Vector3(movespeed*Time.deltaTime, 0);
+        }
+        
     }
 }
