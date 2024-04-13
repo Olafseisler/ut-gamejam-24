@@ -13,26 +13,38 @@ public class MeeleSummon : MonoBehaviour
     [SerializeField] private bool inCombat = false;
     [SerializeField] private bool waiting = false;
     [SerializeField] private string enemyTag;
+    [SerializeField]private float vahe = 0.2f;
 
     private Animator _animator;
+    private string _friendlyTag;
+    private Vector3 _height2;
+    private Vector3 _width2;
     // Start is called before the first frame update
     
     void Start()
     {
         speed *= direction;
         _animator = GetComponent<Animator>();
+        _friendlyTag = gameObject.tag;
+        //_height2 = new Vector3(0, gameObject.GetComponent<Collider2D>().bounds.size.y / 2);
+        _height2 = new Vector3(0, 0.1f);
+        _width2 = new Vector3(gameObject.GetComponent<Collider2D>().bounds.size.x / 2 + 0.01f, 0) * direction;
+    }
+    
+    private void FixedUpdate()
+    {
+        //InCombat
+        if (Physics2D.Raycast(transform.position + _height2 + _width2, _width2, vahe, 1 << LayerMask.NameToLayer(enemyTag))) inCombat = true;
+        else
+        {
+            inCombat = false;
+            //Waiting
+            if (Physics2D.Raycast(transform.position + _height2 +
+                                  _width2, _width2, vahe, 1 << LayerMask.NameToLayer(_friendlyTag))) waiting = true;
+            else waiting = false;
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag(enemyTag)) inCombat = true;
-        else if (other.gameObject.CompareTag(gameObject.tag)) waiting = true;
-    }
-
-    private void OnCollisionExit2D()
-    {
-        inCombat = waiting = false;
-    }
 
     // Update is called once per frame
     void Update()
@@ -41,19 +53,10 @@ public class MeeleSummon : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (inCombat)
-        {
-            combat(Time.deltaTime);
-        }
-
-        else if (waiting)
-        {
-            idle(Time.deltaTime);
-        }
-        else
-        {
-            move(Time.deltaTime);
-        }
+        
+        if (inCombat) combat(Time.deltaTime);
+        else if (waiting)idle(Time.deltaTime);
+        else move(Time.deltaTime);
     }
 
     private void move(float deltaTime)
@@ -64,7 +67,7 @@ public class MeeleSummon : MonoBehaviour
     
     private void combat(float deltaTime)
     {
-        
+        _animator.SetBool("isMoving", false);
     }
     
     private void idle(float deltaTime)
