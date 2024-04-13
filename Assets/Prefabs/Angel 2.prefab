@@ -10,13 +10,15 @@ GameObject:
   m_Component:
   - component: {fileID: 3761025749179325669}
   - component: {fileID: 3060475821286345102}
-  - component: {fileID: -5666260824986281687}
   - component: {fileID: 4396131469903773721}
   - component: {fileID: 4529452759169400443}
   - component: {fileID: -1063705979533990655}
-  m_Layer: 0
+  - component: {fileID: -6111204502077176272}
+  - component: {fileID: -4457358576973005728}
+  - component: {fileID: 7692619592448326876}
+  m_Layer: 7
   m_Name: Angel 2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,26 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5666260824986281687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1556200139782638080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86f5d2f9f819d8349ba67daa232ed367, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5
-  meleeDamage: 1
-  moveSpeed: 1
-  direction: 1
-  inCombat: 0
-  waiting: 0
-  enemyTag: 
-  vahe: 0.2
 --- !u!61 &4396131469903773721
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -201,3 +183,45 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6111204502077176272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556200139782638080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6f99ceadac34475becca92ec3d3104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  isMoving: 1
+  animator: {fileID: 0}
+--- !u!114 &-4457358576973005728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556200139782638080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e51071780c4fd4bbb8a8e3817bbe81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elud: 5
+--- !u!114 &7692619592448326876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556200139782638080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee910105dcfc0241b5ca55da47bb034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPower: 2
+  attackCooldown: 1

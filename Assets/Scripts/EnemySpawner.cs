@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class spawner : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private float spawnInterwal = 1f;
@@ -22,15 +22,19 @@ public class spawner : MonoBehaviour
         if (currentInterwal <= 0)
         {
             var go = Instantiate(tegelane, transform.position , Quaternion.identity);
-            var minionScript = go.GetComponent<MeeleSummon>();
             Debug.Log("Spawned minion");
             if (isEnemySpawner)
             {
-                minionScript.SetupEnemy();
+                // Set enemy tag
+                go.gameObject.tag = "Enemy";
+                // Flip sprite
+                go.GetComponent<SpriteRenderer>().flipX = true;
+                
             }
             else
             {
-                minionScript.SetupFriendly();
+                // Set friendly tag
+                go.gameObject.tag = "Friendly";
             }
 
             currentInterwal = spawnInterwal;

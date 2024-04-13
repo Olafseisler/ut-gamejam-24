@@ -24,8 +24,7 @@ public class UIController : MonoBehaviour
             go.GetComponent<Button>().onClick.AddListener(() =>
             {
                 var go1 = Instantiate(summons[index], summonPosition.position, Quaternion.identity);
-                var minionScript = go1.GetComponent<MeeleSummon>();
-                minionScript.SetupFriendly();   
+                go1.tag = "Friendly";
             });
         }
     }

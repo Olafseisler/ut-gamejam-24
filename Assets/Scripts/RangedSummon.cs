@@ -10,10 +10,12 @@ using UnityEngine.UIElements;
 
 public class RangedSummon : MeeleSummon
 {
-    [SerializeField] private GameObject projectile;
+    [SerializeField] private Projectile projectile;
+    [SerializeField] private float projectileSpeed = 5f;
     [SerializeField] private float range;
     [SerializeField] private bool inRange = false;
-    
+
+    private Vector3 _raycastPosition;
     
     // Start is called before the first frame update
     void Start()
@@ -75,16 +77,33 @@ public class RangedSummon : MeeleSummon
         // Check if the no friendlies in the way
         if (Physics2D.Raycast(transform.position + _height2 + _width2, _width2, range, 1 << LayerMask.NameToLayer(_friendlyTag))) return;
         
-        // Launch projectile
+        // Launch projectile towards enemy
+        var enemyPosition = getEnemyInRange();
+        if (enemyPosition == Vector3.zero) return;
+        
         var go = Instantiate(projectile, transform.position, Quaternion.identity);
-        var projectileScript = go.GetComponent<Projectile>();
-        projectileScript.direction = direction;
+        go.GetComponent<Rigidbody2D>().velocity = (enemyPosition - transform.position).normalized * projectileSpeed;
+        
         // Set the projectile to friendly
         go.tag = _friendlyTag;
+    }
+
+    Vector3 getEnemyInRange()
+    {
+        RaycastHit2D hit;
+        hit = Physics2D.CircleCast(transform.position, range, Vector2.right,
+            range, 1 << LayerMask.NameToLayer(enemyTag));
+        if (hit.collider != null)
+        {
+            return hit.collider.transform.position;
+        }
+
+        return Vector3.zero;
     }
 
     private void OnDrawGizmos()
     {
         
+        // Gizmos.DrawLine(transform.position, );\
     }
 }

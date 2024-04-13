@@ -5,29 +5,31 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private float speed;
     [SerializeField] private float damage;
     
     public int direction;
+    float startCooldown = 0.1f;
 
     // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, 3f);
     }
-
+    
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(direction * (speed * Time.deltaTime) * Vector2.right);
+        startCooldown -= Time.deltaTime;
     }
-
+    
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if ((col.gameObject.CompareTag("Enemy") && gameObject.CompareTag("Friendly")) ||
-            (col.gameObject.CompareTag("Friendly") && gameObject.CompareTag("Enemy")))
-        {
-            col.gameObject.GetComponent<MeeleSummon>().TakeDamage(damage);
-        }
+        if (startCooldown > 0) return;
+        Health health = col.gameObject.GetComponent<Health>();
+        if (health == null) return;
+        
+        health.TakeDamage(damage);
+
+        Destroy(gameObject);
     }
 }

@@ -4,16 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e431c839-e97d-428d-a65f-9064cc1561c1" name="Changes" comment="Added UIController">
+    <list default="true" id="e431c839-e97d-428d-a65f-9064cc1561c1" name="Changes" comment="Tried adding ranged unit with projectile.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ut-gamejam-24/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ut-gamejam-24/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Angel 2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Angel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/InGameUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/InGameUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SummonSelectButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SummonSelectButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/tegelane.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/tegelane.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeeleSummon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeeleSummon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Elud.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Elud.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangedSummon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangedSummon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/liikumine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/liikumine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/spawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/spawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/voitle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/voitle.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +33,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Prefabs/Angel.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69e3bb5952244e078afb26cb39441eed955800/fb/11d6508d/PhysicsDebugDraw.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e307bbb467104258887a104f6151f183469200/fb/29227eaf/CancellationTokenSource.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -121,7 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712943161534</updated>
       <workItem from="1712943162221" duration="21054000" />
-      <workItem from="1713017400731" duration="9761000" />
+      <workItem from="1713017400731" duration="15743000" />
     </task>
     <task id="LOCAL-00001" summary="Added 2 summon prefabs and reorganized the project a bit.">
       <created>1713017504714</created>
@@ -158,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713026882142</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Tried adding ranged unit with projectile.">
+      <created>1713031400844</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713031400844</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +196,39 @@
     <MESSAGE value="Added UI elements for summoning minions." />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="Added UIController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added UIController" />
+    <MESSAGE value="Tried adding ranged unit with projectile." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried adding ranged unit with projectile." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/RangedSummon.cs</url>
+          <line>80</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RangedSummon.cs" initialLine="80" containingFunctionPresentation="method 'rangedCombat'">
+            <startOffsets>
+              <option value="2550" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2588" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/AttackRanged.cs</url>
+          <line>36</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/AttackRanged.cs" initialLine="36" containingFunctionPresentation="method 'FixedUpdate'">
+            <startOffsets>
+              <option value="993" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1136" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
