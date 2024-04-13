@@ -1,6 +1,10 @@
 using UnityEngine;
 
+<<<<<<< Updated upstream:Assets/Scripts/EnemySpawner.cs
 public class EnemySpawner : MonoBehaviour
+=======
+public class Spawner : MonoBehaviour
+>>>>>>> Stashed changes:Assets/Scripts/spawner.cs
 {
     // Start is called before the first frame update
     [SerializeField] private float spawnInterwal = 1f;
