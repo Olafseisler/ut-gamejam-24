@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  dmg: 0
+  dmg: 0.2
   speed: 2
   direction: 1
   inCombat: 0

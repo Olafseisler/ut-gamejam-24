@@ -19,8 +19,15 @@ public class MeeleSummon : MonoBehaviour
     private string _friendlyTag;
     private Vector3 _height2;
     private Vector3 _width2;
+
+    private RaycastHit2D _enemy;
     // Start is called before the first frame update
-    
+    protected float Health
+    {
+        get => health;
+        set => health = value;
+    }
+
     void Start()
     {
         speed *= direction;
@@ -34,7 +41,8 @@ public class MeeleSummon : MonoBehaviour
     private void FixedUpdate()
     {
         //InCombat
-        if (Physics2D.Raycast(transform.position + _height2 + _width2, _width2, vahe, 1 << LayerMask.NameToLayer(enemyTag))) inCombat = true;
+        _enemy = Physics2D.Raycast(transform.position + _height2 + _width2, _width2, vahe, 1 << LayerMask.NameToLayer(enemyTag));
+        if (_enemy)inCombat = true;
         else
         {
             inCombat = false;
@@ -54,7 +62,7 @@ public class MeeleSummon : MonoBehaviour
             Destroy(gameObject);
         }
         
-        if (inCombat) combat(Time.deltaTime);
+        if (inCombat) combat(Time.deltaTime, _enemy);
         else if (waiting)idle(Time.deltaTime);
         else move(Time.deltaTime);
     }
@@ -65,9 +73,11 @@ public class MeeleSummon : MonoBehaviour
         _animator.SetBool("isMoving", true);        
     }
     
-    private void combat(float deltaTime)
+    private void combat(float deltaTime, RaycastHit2D enemyHit2D)
     {
+        GameObject enemy = enemyHit2D.collider.gameObject;
         _animator.SetBool("isMoving", false);
+        enemy.GetComponent<MeeleSummon>().Health = enemy.GetComponent<MeeleSummon>().Health - dmg;
     }
     
     private void idle(float deltaTime)
