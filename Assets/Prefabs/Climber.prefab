@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7693670112528394262}
   - component: {fileID: 9133064626855609450}
   m_Layer: 0
-  m_Name: Devil1 1
+  m_Name: Climber
   m_TagString: Friendly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
