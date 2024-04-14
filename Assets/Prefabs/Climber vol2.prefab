@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42b623c5c498b444b34c7fdb8b53cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyPower: 5
+  flyPower: 8
   flycooldown: 10
 --- !u!114 &877368828755753340
 MonoBehaviour:

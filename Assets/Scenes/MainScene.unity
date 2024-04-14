@@ -1011,7 +1011,7 @@ PrefabInstance:
       objectReference: {fileID: 2475300121016797729, guid: a100a7d9cb8e3584cb83eddb66cb1006, type: 3}
     - target: {fileID: 8964243844289571298, guid: a79d4e2ad974a0d4a9f8934e4576a69f, type: 3}
       propertyPath: enemies.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8964243844289571298, guid: a79d4e2ad974a0d4a9f8934e4576a69f, type: 3}
       propertyPath: enemies.Array.data[0]
@@ -1025,6 +1025,10 @@ PrefabInstance:
       propertyPath: enemies.Array.data[2]
       value: 
       objectReference: {fileID: 1556200139782638080, guid: e902bdd926f17d746a3dd63449fbe568, type: 3}
+    - target: {fileID: 8964243844289571298, guid: a79d4e2ad974a0d4a9f8934e4576a69f, type: 3}
+      propertyPath: enemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 6349041726916887718, guid: 19b268976874e2f4881a3c1dd8416ef0, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

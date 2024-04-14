@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7692619592448326876}
   - component: {fileID: 5931468743601921700}
   m_Layer: 6
-  m_Name: Angel 2
+  m_Name: Archangel
   m_TagString: Friendly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

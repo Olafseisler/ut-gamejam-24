@@ -40,12 +40,23 @@ public class GameController : MonoBehaviour
         currentMana = baseMana;    
         uiController.setHealthText(currentHP);
         uiController.setManaText(currentMana);
+        // Periodically regenerate mana
+        InvokeRepeating("regenMana", 1f, 5f);
     }
 
     // Update is called once per frame
     void Update()
     {
         spawnCooldown -= Time.deltaTime;
+        
+    }
+
+    void regenMana()
+    {
+        if (currentMana < baseMana)
+        {
+            IncreaseMana(10);
+        }
     }
     
     public void TrySpawnFriendly(GameObject unit, int cost)
