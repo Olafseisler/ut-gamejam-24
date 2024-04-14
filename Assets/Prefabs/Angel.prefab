@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4265008851363770763}
   - component: {fileID: 7693670112528394262}
   - component: {fileID: 9133064626855609450}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Angel
   m_TagString: Friendly
   m_Icon: {fileID: 0}

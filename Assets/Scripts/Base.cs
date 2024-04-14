@@ -18,7 +18,7 @@ public class Base : MonoBehaviour
             Destroy(col.gameObject);
         }    
         
-        if (col.gameObject.CompareTag("Friendly"))
+        if (isEnemyBase && col.gameObject.CompareTag("Friendly"))
         {
             OnWinGame?.Invoke();
         }

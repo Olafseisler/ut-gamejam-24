@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: -6111204502077176272}
   - component: {fileID: -4457358576973005728}
   - component: {fileID: 7692619592448326876}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Angel 2
-  m_TagString: Enemy
+  m_TagString: Friendly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
