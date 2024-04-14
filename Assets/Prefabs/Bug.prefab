@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 1137302693901894100}
   - component: {fileID: 4265008851363770763}
   - component: {fileID: 7693670112528394262}
-  - component: {fileID: 9133064626855609450}
   m_Layer: 7
   m_Name: Bug
   m_TagString: Enemy
@@ -226,21 +225,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elud: 10
---- !u!114 &9133064626855609450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1556200139782638080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f62d6f386fb24457b782523f852e8f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 1368647921229991422, guid: 6ba22435b0cf449278a812c771c0d9fd, type: 3}
-  maxRange: 8
-  minRange: 1
-  projectileSpeed: 5
-  enemyLayer: Enemy
-  attackCooldown: 1
