@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -5,8 +7,9 @@ public class EnemySpawner : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private float spawnInterwal = 1f;
-    [SerializeField] private GameObject tegelane;
     [SerializeField] bool isEnemySpawner = false;
+    [SerializeField] private List<GameObject> enemies;
+    [SerializeField] private GameObject spawnParticles;
     
     private float currentInterwal;
     
@@ -22,23 +25,24 @@ public class EnemySpawner : MonoBehaviour
 
         if (currentInterwal <= 0)
         {
-            var go = Instantiate(tegelane, transform.position , Quaternion.identity);
-            // Debug.Log("Spawned minion");
-            if (isEnemySpawner)
-            {
-                // Set enemy tag
-                go.gameObject.tag = "Enemy";
-                // Flip sprite
-                go.GetComponent<SpriteRenderer>().flipX = true;
-                
-            }
-            else
-            {
-                // Set friendly tag
-                go.gameObject.tag = "Friendly";
-            }
+            // Show spawn particles
+            Instantiate(spawnParticles, transform.position, Quaternion.identity);
+            
+            var enemy = getRandomEnemy();
+            enemy.gameObject.tag = isEnemySpawner ? "Enemy" : "Player";
+            var go = Instantiate(enemy, transform.position, Quaternion.identity);
+            
+            // Get the sprite and flip it
+            var sprite = go.GetComponent<SpriteRenderer>();
+            sprite.flipX = isEnemySpawner;
 
             currentInterwal = spawnInterwal;
         }
+    }
+    
+    private GameObject getRandomEnemy()
+    {
+        var randomIndex = Random.Range(0, enemies.Count);
+        return enemies[randomIndex];
     }
 }

@@ -4,23 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e431c839-e97d-428d-a65f-9064cc1561c1" name="Changes" comment="Added background, Friendly and Enemy bases and game win and lose logic.">
+    <list default="true" id="e431c839-e97d-428d-a65f-9064cc1561c1" name="Changes" comment="Add win/lose screen and transition to main menu.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ut-gamejam-24/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ut-gamejam-24/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/InGameUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/InGameUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SummonSelectButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SummonSelectButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Angel 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Angel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bug.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bug.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Devil1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Devil1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Devil2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Devil2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI/pixel SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI/pixel SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttackMelee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttackMelee.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttackRanged.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttackRanged.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Move.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Particles/Bright Fire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Particles/Bright Fire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Particles/Dark fire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Particles/Dark fire.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +136,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712943161534</updated>
       <workItem from="1712943162221" duration="21054000" />
-      <workItem from="1713017400731" duration="24205000" />
+      <workItem from="1713017400731" duration="28327000" />
     </task>
     <task id="LOCAL-00001" summary="Added 2 summon prefabs and reorganized the project a bit.">
       <created>1713017504714</created>
@@ -197,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713041392185</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add win/lose screen and transition to main menu.">
+      <created>1713079260178</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713079260178</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +224,8 @@
     <MESSAGE value="Tried adding ranged unit with projectile." />
     <MESSAGE value="Reworked the movement and damage system." />
     <MESSAGE value="Added background, Friendly and Enemy bases and game win and lose logic." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added background, Friendly and Enemy bases and game win and lose logic." />
+    <MESSAGE value="Add win/lose screen and transition to main menu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add win/lose screen and transition to main menu." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

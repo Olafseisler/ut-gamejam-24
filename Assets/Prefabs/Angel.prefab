@@ -162,7 +162,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &-1063705979533990655
 Animator:
   serializedVersion: 5
@@ -241,6 +241,6 @@ MonoBehaviour:
   projectile: {fileID: 1368647921229991422, guid: 6ba22435b0cf449278a812c771c0d9fd, type: 3}
   maxRange: 8
   minRange: 1
-  projectileSpeed: 5
+  projectileSpeed: 8
   enemyLayer: Enemy
   attackCooldown: 1

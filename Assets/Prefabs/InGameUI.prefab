@@ -603,6 +603,7 @@ MonoBehaviour:
   healthText: {fileID: 79434694077034962}
   manaText: {fileID: 6119662770079728263}
   gameEndPanel: {fileID: 3637247475775468253}
+  unitCost: 10
 --- !u!1 &4309226662258702041
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +897,7 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0

@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 4265008851363770763}
   - component: {fileID: 7693670112528394262}
   - component: {fileID: 9133064626855609450}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bug
-  m_TagString: Friendly
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 9c7e4c8bf955b5847a658ceefe7c891a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.46226418, g: 0.3597811, b: 0.3597811, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

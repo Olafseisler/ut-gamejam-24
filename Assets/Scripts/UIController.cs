@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,9 @@ public class UIController : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI healthText;
     [SerializeField] private TMPro.TextMeshProUGUI manaText;
     [SerializeField] private GameObject gameEndPanel;
+
+    [SerializeField] private int unitCost = 10;
+    public static event Action<GameObject, int> OnSummonSelected;
     
     // Start is called before the first frame update
     void Start()
@@ -25,8 +29,7 @@ public class UIController : MonoBehaviour
             var index = i;
             go.GetComponent<Button>().onClick.AddListener(() =>
             {
-                var go1 = Instantiate(summons[index], summonPosition.position, Quaternion.identity);
-                go1.tag = "Friendly";
+                OnSummonSelected?.Invoke(summons[index], unitCost);
             });
         }
     }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6899489239389981147}
   - component: {fileID: 1563321022558975242}
   - component: {fileID: 5431191868095776283}
+  - component: {fileID: 4960556965746947455}
   m_Layer: 0
   m_Name: Bright Fire
   m_TagString: Untagged
@@ -4888,3 +4889,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &4960556965746947455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8539902651526864119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ad14189e085074b8e66f7deef6a540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestructionTime: 2

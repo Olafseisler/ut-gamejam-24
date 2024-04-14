@@ -7,7 +7,6 @@ public class Move : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2.0f;
     [SerializeField] private bool isMoving = true;
-
     [SerializeField] private Animator animator;
     
     private int moveDirection = 1;

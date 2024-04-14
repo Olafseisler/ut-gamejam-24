@@ -10,10 +10,16 @@ public class GameController : MonoBehaviour
     [SerializeField] private int baseMana = 100;
     [SerializeField] private int currentMana;
     [SerializeField] private UIController uiController;
+    [SerializeField] private FriendlySpawner friendlySpawner;
+    
+    // Define instance
+    public static GameController instance;
+    float spawnCooldown = 0.5f;
 
     private void OnEnable()
     {
         Health.OnEnemyDeath += IncreaseMana;
+        UIController.OnSummonSelected += TrySpawnFriendly;
         Base.OnEnemyEnterBase += DecreaseHP;
         Base.OnWinGame += WinGame;
     }
@@ -21,6 +27,7 @@ public class GameController : MonoBehaviour
     private void OnDisable()
     {
         Health.OnEnemyDeath -= IncreaseMana;
+        UIController.OnSummonSelected -= TrySpawnFriendly;
         Base.OnEnemyEnterBase -= DecreaseHP;
         Base.OnWinGame -= WinGame;
     }
@@ -28,6 +35,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         currentHP = baseHP;
         currentMana = baseMana;    
         uiController.setHealthText(currentHP);
@@ -37,9 +45,27 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        spawnCooldown -= Time.deltaTime;
     }
     
+    public void TrySpawnFriendly(GameObject unit, int cost)
+    {
+        if (currentMana < cost)
+        {
+            Debug.Log("Not enough mana!");
+        }
+        if (spawnCooldown > 0)
+        {
+            Debug.Log("Cooldown!");
+        }
+        else
+        {
+            friendlySpawner.SpawnFriendly(unit);
+            DecreaseMana(cost);
+            spawnCooldown = 1f;
+        }
+    }
+
     void DecreaseHP(int damage)
     {
         Debug.Log("HP decreased by " + damage);
@@ -78,6 +104,16 @@ public class GameController : MonoBehaviour
         {
             currentHP = baseHP;
         }
+    }
+    
+    public int GetMana()
+    {
+        return currentMana;
+    }
+    
+    public int GetHP()
+    {
+        return currentHP;
     }
     
     void WinGame()

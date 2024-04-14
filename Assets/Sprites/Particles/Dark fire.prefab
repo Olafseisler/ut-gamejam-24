@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7179532368739487418}
   - component: {fileID: 9135569086665778004}
   - component: {fileID: 7098276543558807836}
+  - component: {fileID: 9109234834516704027}
   m_Layer: 0
   m_Name: Dark fire
   m_TagString: Untagged
@@ -4888,3 +4889,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &9109234834516704027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475300121016797729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ad14189e085074b8e66f7deef6a540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestructionTime: 2
