@@ -4,7 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="647a02d9-e0cd-4c44-876c-cc8bc58d14fc" name="Changes" comment="" />
+    <list default="true" id="647a02d9-e0cd-4c44-876c-cc8bc58d14fc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/AngelAttack.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/ClimbAttack.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/ClimbAttack.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/ClimbIdle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/ClimbIdle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/ClimbWalk.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/ClimbWalk.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Climber.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Climber.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1Attack.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1Attack.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1Idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1Idle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1Walk.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1Walk.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Angel.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Angel.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Angel.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Angel.controller.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Angel2.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Angel2.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Devil1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel 3.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Devil1.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Angel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/devil 1 _walk 2 (1) 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Devil1 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/devil 1 _walk 2 (1) 1.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AngelAttack.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/devil 1 _walk 2 (1).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/devil 1 _walk 2 (1).prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Devil1 1.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Angels/Angel 1 _attack .png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Angels/Angel 1 _attack .png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Angels/AngelIdle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AngelIdle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Angels/AngelIdle.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AngelIdle.anim.meta" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,25 +52,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\37253\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\37253\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\37253\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\37253\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\37253\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\37253\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
