@@ -603,7 +603,7 @@ MonoBehaviour:
   healthText: {fileID: 79434694077034962}
   manaText: {fileID: 6119662770079728263}
   gameEndPanel: {fileID: 3637247475775468253}
-  unitCost: 10
+  cannotSpawnText: {fileID: 0}
 --- !u!1 &4309226662258702041
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2924398760822097203}
-  - component: {fileID: 3795365330869226239}
+  - component: {fileID: 2738656527735055752}
   m_Layer: 5
   m_Name: GameStats
   m_TagString: Untagged
@@ -642,7 +642,7 @@ RectTransform:
   m_AnchoredPosition: {x: 104.79999, y: -67.850006}
   m_SizeDelta: {x: 200, y: 105.70001}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3795365330869226239
+--- !u!114 &2738656527735055752
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4309226662258702041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
@@ -703,7 +703,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2151131652986115855
 CanvasRenderer:
@@ -939,7 +939,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3273445159746874183
 CanvasRenderer:

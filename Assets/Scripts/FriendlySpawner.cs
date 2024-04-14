@@ -16,7 +16,7 @@ public class FriendlySpawner : MonoBehaviour
         priestAnimator.SetTrigger("Trigger");
         
         var friendly = Instantiate(unit, transform.position, Quaternion.identity);
-        friendly.gameObject.tag = "Player";
+        friendly.gameObject.tag = "Friendly";
         
     }
 }

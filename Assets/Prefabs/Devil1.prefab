@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1137302693901894100}
   - component: {fileID: 4265008851363770763}
   - component: {fileID: 7693670112528394262}
+  - component: {fileID: -7471054215853489021}
   m_Layer: 7
   m_Name: Devil1
   m_TagString: Enemy
@@ -225,3 +226,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elud: 8
+--- !u!114 &-7471054215853489021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556200139782638080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42b623c5c498b444b34c7fdb8b53cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyPower: 8
+  flycooldown: 5

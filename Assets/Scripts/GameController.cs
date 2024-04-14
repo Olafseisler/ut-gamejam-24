@@ -53,16 +53,19 @@ public class GameController : MonoBehaviour
         if (currentMana < cost)
         {
             Debug.Log("Not enough mana!");
+            uiController.showCannotSpawn("Not enough mana!");
         }
         if (spawnCooldown > 0)
         {
             Debug.Log("Cooldown!");
+            return;
+            uiController.showCannotSpawn("Cooldown " + spawnCooldown.ToString("0.0") + "s");
         }
         else
         {
             friendlySpawner.SpawnFriendly(unit);
             DecreaseMana(cost);
-            spawnCooldown = 1f;
+            spawnCooldown = 0.5f;
         }
     }
 
@@ -70,40 +73,40 @@ public class GameController : MonoBehaviour
     {
         Debug.Log("HP decreased by " + damage);
         currentHP -= damage;
-        uiController.setHealthText(currentHP);
         if (currentHP <= 0)
         {
             currentHP = 0;
             Debug.Log("You lose!");
             uiController.showGameEnd(false);
         }
+        uiController.setHealthText(currentHP);
     }
     
     void DecreaseMana(int mana)
     {
         currentMana -= mana;
-        uiController.setManaText(currentMana);
         if (currentMana <= 0)
         {
             currentMana = 0;
         }
+        uiController.setManaText(currentMana);
     }
     
     void IncreaseMana(int mana)
     {
         Debug.Log("Mana increased by " + mana);
-        uiController.setManaText(currentMana);
         currentMana += mana;
+        uiController.setManaText(currentMana);
     }
     
     void IncreaseHP(int hp)
     {
         currentHP += hp;
-        uiController.setHealthText(currentHP);
         if (currentHP >= baseHP)
         {
             currentHP = baseHP;
         }
+        uiController.setHealthText(currentHP);
     }
     
     public int GetMana()
@@ -120,6 +123,6 @@ public class GameController : MonoBehaviour
     {
         Debug.Log("You win!");
         Time.timeScale = 0;
-        // TODO: Add win screen
+        uiController.showGameEnd(true);
     }
 }

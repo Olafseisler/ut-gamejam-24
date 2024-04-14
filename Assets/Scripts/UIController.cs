@@ -13,9 +13,12 @@ public class UIController : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI healthText;
     [SerializeField] private TMPro.TextMeshProUGUI manaText;
     [SerializeField] private GameObject gameEndPanel;
+    [SerializeField] private GameObject cannotSpawnText;
 
-    [SerializeField] private int unitCost = 10;
     public static event Action<GameObject, int> OnSummonSelected;
+
+    private float bannerTimer = 0f;
+    private bool bannerActive = false;
     
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,7 @@ public class UIController : MonoBehaviour
             var image = go.GetComponentsInChildren<Image>()[1];
             image.sprite = summons[i].GetComponent<SpriteRenderer>().sprite;
             var index = i;
+            var unitCost = summons[i].GetComponent<ManaCost>().manaCost;
             go.GetComponent<Button>().onClick.AddListener(() =>
             {
                 OnSummonSelected?.Invoke(summons[index], unitCost);
@@ -43,6 +47,16 @@ public class UIController : MonoBehaviour
     {
         healthText.text = "Health: " + health;
     }
+    
+    public void showCannotSpawn(string message)
+    {
+        if (bannerActive) return;
+        cannotSpawnText.SetActive(true);
+        cannotSpawnText.GetComponent<TMPro.TextMeshProUGUI>().text = message;
+        bannerActive = true;
+        bannerTimer = 1.5f;
+    }
+
     
     public void showGameEnd(bool win)
     {
@@ -64,6 +78,16 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (bannerActive)
+        {
+            bannerTimer -= Time.deltaTime;
+            if (bannerTimer <= 0)
+            {
+                cannotSpawnText.SetActive(false);
+                bannerActive = false;
+            }
+        }
+        
         
     }
 }
