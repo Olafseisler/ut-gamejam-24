@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] private float baseHP = 100f;
-    [SerializeField] private float currentHP;
-    [SerializeField] private float baseMana = 100f;
-    [SerializeField] private float currentMana;
+    [SerializeField] private int baseHP = 100;
+    [SerializeField] private int currentHP;
+    [SerializeField] private int baseMana = 100;
+    [SerializeField] private int currentMana;
+    [SerializeField] private UIController uiController;
 
     private void OnEnable()
     {
@@ -29,6 +30,8 @@ public class GameController : MonoBehaviour
     {
         currentHP = baseHP;
         currentMana = baseMana;    
+        uiController.setHealthText(currentHP);
+        uiController.setManaText(currentMana);
     }
 
     // Update is called once per frame
@@ -37,37 +40,40 @@ public class GameController : MonoBehaviour
         
     }
     
-    void DecreaseHP(float damage)
+    void DecreaseHP(int damage)
     {
         Debug.Log("HP decreased by " + damage);
         currentHP -= damage;
+        uiController.setHealthText(currentHP);
         if (currentHP <= 0)
         {
             currentHP = 0;
             Debug.Log("You lose!");
-            Time.timeScale = 0;
-            // TODO: Add lose screen or go back to main menu
+            uiController.showGameEnd(false);
         }
     }
     
-    void DecreaseMana(float mana)
+    void DecreaseMana(int mana)
     {
         currentMana -= mana;
+        uiController.setManaText(currentMana);
         if (currentMana <= 0)
         {
             currentMana = 0;
         }
     }
     
-    void IncreaseMana(float mana)
+    void IncreaseMana(int mana)
     {
         Debug.Log("Mana increased by " + mana);
+        uiController.setManaText(currentMana);
         currentMana += mana;
     }
     
-    void IncreaseHP(float hp)
+    void IncreaseHP(int hp)
     {
         currentHP += hp;
+        uiController.setHealthText(currentHP);
         if (currentHP >= baseHP)
         {
             currentHP = baseHP;

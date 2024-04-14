@@ -34,7 +34,8 @@ public class AttackRanged : MonoBehaviour
             return;
         }
         // Do not shoot if friendlies are in the way
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, enemyPosition - transform.position, maxRange, 1 << LayerMask.NameToLayer(enemyLayer));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, enemyPosition - transform.position, 
+            maxRange, 1 << LayerMask.NameToLayer(gameObject.tag));
         if (hit.collider != null && hit.collider.CompareTag(gameObject.tag))
         {
             return;
