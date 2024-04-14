@@ -7,19 +7,19 @@ using System;
 public class Health : MonoBehaviour
 {
 
-    [SerializeField] private float elud = 10f;
+    [SerializeField] private int elud = 10;
 
-    public static event Action<float> OnEnemyDeath;
+    public static event Action<int> OnEnemyDeath;
     
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         elud -= damage;
         if (elud <= 0)
         {
             Destroy(gameObject);
             if (gameObject.CompareTag("Enemy"))
-                OnEnemyDeath?.Invoke(10f);
+                OnEnemyDeath?.Invoke(10);
         }
     }
 }

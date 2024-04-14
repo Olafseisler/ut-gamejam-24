@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private float damage;
+    [SerializeField] private int damage;
     
     public int direction;
     float startCooldown = 0.1f;

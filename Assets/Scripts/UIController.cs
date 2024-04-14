@@ -9,7 +9,9 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject summonSelectButton;
     [SerializeField] GameObject summonButtonParent;
     [SerializeField] List<GameObject> summons;
-    
+    [SerializeField] private TMPro.TextMeshProUGUI healthText;
+    [SerializeField] private TMPro.TextMeshProUGUI manaText;
+    [SerializeField] private GameObject gameEndPanel;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,33 @@ public class UIController : MonoBehaviour
             });
         }
     }
+    
+    public void setManaText(int mana)
+    {
+        manaText.text = "Mana: " + mana;
+    }
+    
+    public void setHealthText(int health)
+    {
+        healthText.text = "Health: " + health;
+    }
+    
+    public void showGameEnd(bool win)
+    {
+        Time.timeScale = 0;
+        gameEndPanel.SetActive(true);
+        // Get the EndText object
+        var endText = gameEndPanel.GetComponentInChildren<TMPro.TextMeshProUGUI>();
+        // Set the text based on win or lose
+        endText.text = win ? "You win!" : "You lose!";
+    }
+    
+    public void goToMainMenu()
+    {
+        Time.timeScale = 1;
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+    }
+    
 
     // Update is called once per frame
     void Update()

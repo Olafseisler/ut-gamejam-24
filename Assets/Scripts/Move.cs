@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +18,7 @@ public class Move : MonoBehaviour
         moveDirection = gameObject.tag == "Enemy" ? -1 : 1;
         animator = GetComponent<Animator>();
     }
-
+    
     // Update is called once per frame
     void FixedUpdate() //iga frame update käivitatakse
     {

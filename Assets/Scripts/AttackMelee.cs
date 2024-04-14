@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class AttackMelee : MonoBehaviour
 {
-    [SerializeField] private float attackPower = 2f;
+    [SerializeField] private int attackPower = 2;
     [SerializeField] private float attackCooldown = 1f;
-    
+
+    private Animator _animator;
     private float _currentAttackCooldown;
     
 
@@ -15,6 +16,7 @@ public class AttackMelee : MonoBehaviour
     void Start()
     {
         _currentAttackCooldown = 0;
+        _animator = GetComponent<Animator>();
     }
     
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class AttackMelee : MonoBehaviour
             
             health.TakeDamage(attackPower);
             _currentAttackCooldown = attackCooldown;
+            _animator.SetTrigger("Attack");
         }
     }
 }

@@ -4,19 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e431c839-e97d-428d-a65f-9064cc1561c1" name="Changes" comment="Reworked the movement and damage system.">
+    <list default="true" id="e431c839-e97d-428d-a65f-9064cc1561c1" name="Changes" comment="Added background, Friendly and Enemy bases and game win and lose logic.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ut-gamejam-24/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ut-gamejam-24/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/InGameUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/InGameUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SummonSelectButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SummonSelectButton.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI/pixel SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI/pixel SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttackMelee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttackMelee.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttackRanged.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttackRanged.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Angel 2  _move 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Angel 2  _move 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/angel 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/angel 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/angel 2 _move 2 (1).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/angel 2 _move 2 (1).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/angel 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/angel 2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/flap (1).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/flap (1).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/flap (2).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/flap (2).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Move.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +32,19 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Prefabs/Angel.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Prefabs/SummonSelectButton.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Scripts/Base.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Scripts/Projectile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Sprites/angel 1.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/Assets/Sprites/angel 2.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/olaf/Documents/Unity Projects/ut-gamejam-24/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/5f/65a5572f/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/69e3bb5952244e078afb26cb39441eed955800/fb/11d6508d/PhysicsDebugDraw.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e307bbb467104258887a104f6151f183469200/fb/29227eaf/CancellationTokenSource.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -127,7 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712943161534</updated>
       <workItem from="1712943162221" duration="21054000" />
-      <workItem from="1713017400731" duration="19222000" />
+      <workItem from="1713017400731" duration="24205000" />
     </task>
     <task id="LOCAL-00001" summary="Added 2 summon prefabs and reorganized the project a bit.">
       <created>1713017504714</created>
@@ -178,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713037780820</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added background, Friendly and Enemy bases and game win and lose logic.">
+      <created>1713041392185</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713041392185</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +219,8 @@
     <MESSAGE value="Added UIController" />
     <MESSAGE value="Tried adding ranged unit with projectile." />
     <MESSAGE value="Reworked the movement and damage system." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reworked the movement and damage system." />
+    <MESSAGE value="Added background, Friendly and Enemy bases and game win and lose logic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added background, Friendly and Enemy bases and game win and lose logic." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
