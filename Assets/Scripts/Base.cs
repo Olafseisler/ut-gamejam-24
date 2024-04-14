@@ -6,13 +6,14 @@ using UnityEngine;
 public class Base : MonoBehaviour
 {
     [SerializeField] private bool isEnemyBase = false;
+    [SerializeField] private int enemyBaseHealth = 100;
     
     public static event Action<int> OnEnemyEnterBase;
     public static event Action OnWinGame;
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Enemy"))
+        if (!isEnemyBase && col.gameObject.CompareTag("Enemy"))
         {
             OnEnemyEnterBase?.Invoke(10);
             Destroy(col.gameObject);
@@ -20,7 +21,9 @@ public class Base : MonoBehaviour
         
         if (isEnemyBase && col.gameObject.CompareTag("Friendly"))
         {
-            OnWinGame?.Invoke();
+            enemyBaseHealth -= col.gameObject.GetComponent<ManaCost>().manaCost;
+            if (enemyBaseHealth <= 0)
+                OnWinGame?.Invoke();
         }
     }
 }
