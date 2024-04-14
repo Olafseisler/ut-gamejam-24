@@ -4,38 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="647a02d9-e0cd-4c44-876c-cc8bc58d14fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/AngelAttack.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/ClimbAttack.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/ClimbAttack.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/ClimbIdle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/ClimbIdle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/ClimbWalk.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/ClimbWalk.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Climber.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Climber.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1Attack.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1Attack.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1Idle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1Idle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1Walk.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Devil1Walk.anim.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Angel.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Angel.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Angel.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Angel.controller.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Angel2.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Angel2.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Devil1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel 3.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Devil1.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Angel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/devil 1 _walk 2 (1) 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Devil1 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/devil 1 _walk 2 (1) 1.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AngelAttack.anim.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/devil 1 _walk 2 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/devil 1 _walk 2 (1).prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Devil1 1.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Angels/Angel 1 _attack .png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Angels/Angel 1 _attack .png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Angels/AngelIdle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AngelIdle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Angels/AngelIdle.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AngelIdle.anim.meta" afterDir="false" />
-    </list>
+    <list default="true" id="647a02d9-e0cd-4c44-876c-cc8bc58d14fc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +24,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging master",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
