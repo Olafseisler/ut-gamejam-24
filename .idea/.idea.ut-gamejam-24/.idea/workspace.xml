@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e431c839-e97d-428d-a65f-9064cc1561c1" name="Changes" comment="Added spawning effects n stuff.">
+    <list default="true" id="e431c839-e97d-428d-a65f-9064cc1561c1" name="Changes" comment="Added mana cost and cooldown messages">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ut-gamejam-24/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ut-gamejam-24/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Angel 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Angel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Angel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Climber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Climber.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Devil1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Devil1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/InGameUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/InGameUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SummonSelectButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SummonSelectButton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI/pixel SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI/pixel SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Base.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FriendlySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FriendlySpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +129,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712943161534</updated>
       <workItem from="1712943162221" duration="21054000" />
-      <workItem from="1713017400731" duration="34179000" />
+      <workItem from="1713017400731" duration="35249000" />
     </task>
     <task id="LOCAL-00001" summary="Added 2 summon prefabs and reorganized the project a bit.">
       <created>1713017504714</created>
@@ -212,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713084385283</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added mana cost and cooldown messages">
+      <created>1713094583687</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713094583687</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +233,8 @@
     <MESSAGE value="Added background, Friendly and Enemy bases and game win and lose logic." />
     <MESSAGE value="Add win/lose screen and transition to main menu." />
     <MESSAGE value="Added spawning effects n stuff." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added spawning effects n stuff." />
+    <MESSAGE value="Added mana cost and cooldown messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added mana cost and cooldown messages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -267,6 +264,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameController.cs</url>
+          <line>54</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" initialLine="54" containingFunctionPresentation="method 'TrySpawnFriendly'">
+            <startOffsets>
+              <option value="1504" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1534" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

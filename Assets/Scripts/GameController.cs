@@ -55,11 +55,11 @@ public class GameController : MonoBehaviour
             Debug.Log("Not enough mana!");
             uiController.showCannotSpawn("Not enough mana!");
         }
-        if (spawnCooldown > 0)
+        else if (spawnCooldown > 0)
         {
             Debug.Log("Cooldown!");
-            return;
-            uiController.showCannotSpawn("Cooldown " + spawnCooldown.ToString("0.0") + "s");
+            // uiController.showCannotSpawn("Cooldown " + spawnCooldown.ToString("0.0") + "s");
+            
         }
         else
         {
